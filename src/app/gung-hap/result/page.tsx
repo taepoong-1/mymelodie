@@ -15,6 +15,42 @@ function GungHapResultContent() {
 
   const result = getCompatibilityResult(me, you);
 
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("링크가 복사되었습니다!");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      const textArea = document.createElement("textarea");
+      textArea.value = window.location.href;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        alert("링크가 복사되었습니다!");
+      } catch (err) {
+        alert("링크 복사에 실패했습니다.");
+      }
+      document.body.removeChild(textArea);
+    }
+  };
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: `우리의 궁합 점수는 ${result.score}점!`,
+          text: result.desc,
+          url: window.location.href,
+        });
+      } else {
+        handleCopyLink();
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
+
   return (
     <div
       className="container animate-fade-in"
@@ -102,10 +138,11 @@ function GungHapResultContent() {
 
       <div style={{ display: "flex", gap: "12px" }}>
         <button
+          onClick={handleShare}
           className="btn btn-full"
           style={{ background: "#FAE100", color: "#371D1E", width: "100%" }}
         >
-          <Share2 size={20} style={{ marginRight: "8px" }} /> 친구에게 자랑하기
+          <Share2 size={20} style={{ marginRight: "8px" }} /> 결과 공유하기
         </button>
       </div>
 

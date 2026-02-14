@@ -20,21 +20,45 @@ function ResultContent() {
     return <div>결과를 찾을 수 없습니다.</div>;
   }
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: result.title,
-        text: result.description,
-        url: window.location.href,
-      });
-    } else {
-      alert("공유하기 기능이 지원되지 않는 브라우저입니다.");
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: result.title,
+          text: result.description,
+          url: window.location.href,
+        });
+      } else {
+        handleCopyLink();
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+      // If user cancels or other error, fallback to copy if it wasn't a cancellation
+      // But typically we don't want to annoy user if they cancelled.
+      // However, on some desktops navigator.share exists but fails immediately.
+      // We'll fall back to copy only if share is undefined, which is handled above.
     }
   };
 
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
-    alert("링크가 복사되었습니다!");
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("링크가 복사되었습니다!");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      // Fallback for older browsers
+      const textArea = document.createElement("textarea");
+      textArea.value = window.location.href;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        alert("링크가 복사되었습니다!");
+      } catch (err) {
+        alert("링크 복사에 실패했습니다.");
+      }
+      document.body.removeChild(textArea);
+    }
   };
 
   return (
@@ -109,7 +133,7 @@ function ResultContent() {
           className="btn"
           style={{ background: "#FAE100", color: "#371D1E" }}
         >
-          <Share2 size={20} style={{ marginRight: "8px" }} /> 카카오톡 공유
+          <Share2 size={20} style={{ marginRight: "8px" }} /> 결과 공유하기
         </button>
         <button
           onClick={handleCopyLink}
