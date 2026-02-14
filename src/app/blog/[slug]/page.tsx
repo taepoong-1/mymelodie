@@ -5,6 +5,10 @@ import { ArrowLeft } from "lucide-react";
 
 export function generateStaticParams() {
   const posts = getAllPosts();
+  console.log(
+    "Generating static params for blog posts:",
+    posts.map((p) => p.slug),
+  );
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -23,7 +27,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       style={{ padding: "40px 16px", maxWidth: "768px" }}
     >
       <Link
-        href="/blog/"
+        href="/blog"
         className="btn"
         style={{
           display: "inline-flex",
