@@ -55,11 +55,13 @@ export default function PopularPage() {
                 flexShrink: 0,
               }}
             >
-              {test.category === "personality"
-                ? "🧩"
-                : test.category === "love"
-                  ? "💘"
-                  : "💼"}
+              {test.emoji
+                ? test.emoji
+                : test.category === "personality"
+                  ? "🧩"
+                  : test.category === "love"
+                    ? "💘"
+                    : "💼"}
             </div>
             <div style={{ flex: 1 }}>
               <div
