@@ -210,7 +210,7 @@ export const tests: Test[] = [
       "나는 어떤 놀이터에서 가장 행복할까? 나에게 딱 맞는 심테랜드 공간 찾기!",
     emoji: "🎢",
     category: "personality",
-    viewCount: 0,
+    viewCount: 3200,
     questions: [
       {
         id: 1,
@@ -366,7 +366,7 @@ export const tests: Test[] = [
       "당신은 정말 인간일까…? 15개의 질문으로 당신의 뇌 정체를 분석합니다.",
     emoji: "🧠",
     category: "personality",
-    viewCount: 0,
+    viewCount: 1540,
     questions: [
       {
         id: 1,
