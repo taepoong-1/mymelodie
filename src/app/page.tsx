@@ -106,18 +106,21 @@ export default function Home() {
           }}
         >
           <FeatureCard
+            href="/tests/fruit-personality"
             title="나의 숨겨진 성격 유형은?"
             desc="소름돋는 정확도! 3분만에 알아보는 성격 분석"
             tag="성격"
             bg="linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%)"
           />
           <FeatureCard
+            href="/fortune"
             title="2026년 대박 운세 확인하기"
             desc="올해 나의 재물운, 연애운은 어떨까?"
             tag="운세"
             bg="linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)"
           />
           <FeatureCard
+            href="/calculator/salary"
             title="연봉 실수령액 계산기"
             desc="세금 떼고 실제로 받는 돈은 얼마일까?"
             tag="계산기"
@@ -175,24 +178,30 @@ function CategoryCard({
 }
 
 function FeatureCard({
+  href,
   title,
   desc,
   tag,
   bg,
 }: {
+  href: string;
   title: string;
   desc: string;
   tag: string;
   bg: string;
 }) {
   return (
-    <div
+    <Link
+      href={href}
       className="card"
       style={{
         padding: 0,
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
+        transition: "transform 0.2s, box-shadow 0.2s",
+        textDecoration: "none",
+        color: "inherit",
       }}
     >
       <div
@@ -235,18 +244,20 @@ function FeatureCard({
             justifyContent: "flex-end",
           }}
         >
-          <button
+          <span
             className="btn"
             style={{
               padding: "8px 16px",
               fontSize: "0.8rem",
-              background: "var(--background)",
+              background: "transparent",
+              border: "1px solid var(--border)",
+              color: "var(--text-main)",
             }}
           >
             시작하기
-          </button>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
