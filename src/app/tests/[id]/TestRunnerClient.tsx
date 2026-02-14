@@ -148,6 +148,7 @@ export default function TestRunner() {
                 justifyContent: "space-between",
                 padding: "20px",
                 textAlign: "left",
+                color: "var(--text-main)",
               }}
             >
               {answer.text}
