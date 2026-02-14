@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   // Avoid hydration mismatch
   const [mounted, setMounted] = useState(false);
 
@@ -19,7 +19,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       style={{
         background: "transparent",
         border: "none",
@@ -32,7 +32,7 @@ export function ThemeToggle() {
       }}
       aria-label="테마 변경"
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
 }

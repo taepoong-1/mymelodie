@@ -38,7 +38,7 @@
   }
 }
 
-[data-theme="dark"] {
+.dark {
   --background: #121212;
   --surface: #1e1e1e;
   --text-main: #f1f3f5;
