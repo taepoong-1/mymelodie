@@ -27,7 +27,7 @@ export default function BlogListPage() {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/blog/${post.slug}`}
+            href={`/blog/${post.slug}/`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <div

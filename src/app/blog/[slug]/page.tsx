@@ -27,7 +27,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       style={{ padding: "40px 16px", maxWidth: "768px" }}
     >
       <Link
-        href="/blog"
+        href="/blog/"
         className="btn"
         style={{
           display: "inline-flex",
