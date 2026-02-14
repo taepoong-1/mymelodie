@@ -41,11 +41,8 @@ export default function ContactPage() {
             }}
           >
             <Mail size={24} />
-            <span>support@mymelodie.com</span>
+            <span>bugs99000@gmail.com</span>
           </div>
-          <p style={{ marginTop: "10px", fontSize: "0.9rem", color: "#666" }}>
-            (실제 운영 이메일로 변경이 필요합니다)
-          </p>
         </div>
 
         <p className="text-sm text-gray-500">
