@@ -200,6 +200,161 @@ export const tests: Test[] = [
       </ul>
     `,
   },
+  {
+    id: "playground-type",
+    title: "심테랜드 놀이터 유형 테스트",
+    description:
+      "나는 어떤 놀이터에서 가장 행복할까? 나에게 딱 맞는 심테랜드 공간 찾기!",
+    category: "personality",
+    viewCount: 0,
+    questions: [
+      {
+        id: 1,
+        text: "아침에 눈 뜰 때 기분은?",
+        answers: [
+          { text: "상쾌하게 기지개 🌞", score: { A: 1 } },
+          { text: "조금 더 자기 😪", score: { B: 1 } },
+          { text: "꿈속에 머물고 싶은 느낌 💭", score: { C: 1 } },
+          { text: "계획 세우고 싶은 의욕 💡", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 2,
+        text: "지금 먹고 싶은 간식은?",
+        answers: [
+          { text: "달콤한 케이크 🍰", score: { A: 1 } },
+          { text: "짭짤한 과자 🍿", score: { B: 1 } },
+          { text: "시원한 음료수 🧃", score: { C: 1 } },
+          { text: "건강한 과일 🍎", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 3,
+        text: "친구와 놀 때 나는?",
+        answers: [
+          { text: "분위기 메이커 🎉", score: { A: 1 } },
+          { text: "듣는 편! 👂", score: { B: 1 } },
+          { text: "조용히 관찰자 🪐", score: { C: 1 } },
+          { text: "계획 세우는 역할 📋", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 4,
+        text: "네 방을 한 단어로 표현하면?",
+        answers: [
+          { text: "활기찬 공간 🎨", score: { A: 1 } },
+          { text: "편안한 휴식처 🛋️", score: { B: 1 } },
+          { text: "비밀스러운 아지트 🗝️", score: { C: 1 } },
+          { text: "정리 정돈 깔끔 🤓", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 5,
+        text: "가장 좋아하는 날씨는?",
+        answers: [
+          { text: "화창한 봄날 🌸", score: { A: 1 } },
+          { text: "비 오는 오후 ☔", score: { B: 1 } },
+          { text: "밤하늘 가득 별빛 ✨", score: { C: 1 } },
+          { text: "바람 시원한 가을 🍁", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 6,
+        text: "SNS에 올릴 사진은 주로?",
+        answers: [
+          { text: "웃는 내 얼굴 😁", score: { A: 1 } },
+          { text: "풍경 사진 🌄", score: { B: 1 } },
+          { text: "멍한 감성샷 📷", score: { C: 1 } },
+          { text: "깔끔한 정리 컷 ✨", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 7,
+        text: "다음 중 하고 싶은 활동은?",
+        answers: [
+          { text: "춤추며 놀기 🕺", score: { A: 1 } },
+          { text: "책 읽으며 휴식 📚", score: { B: 1 } },
+          { text: "밤 산책 🌙", score: { C: 1 } },
+          { text: "목표 리스트 작성 ✏️", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 8,
+        text: "스트레스를 받으면?",
+        answers: [
+          { text: "친구에게 털어놓는다 🗣️", score: { A: 1 } },
+          { text: "음악 듣는다 🎧", score: { B: 1 } },
+          { text: "조용히 잠시 쉰다 😌", score: { C: 1 } },
+          { text: "운동이나 정리한다 💪", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 9,
+        text: "가장 끌리는 색은?",
+        answers: [
+          { text: "노란색 💛", score: { A: 1 } },
+          { text: "파란색 💙", score: { B: 1 } },
+          { text: "보랏빛 🌌", score: { C: 1 } },
+          { text: "흰색 ⚪", score: { D: 1 } },
+        ],
+      },
+      {
+        id: 10,
+        text: "자신을 가장 잘 나타내는 말은?",
+        answers: [
+          { text: "활발함 🌟", score: { A: 1 } },
+          { text: "편안함 ☁️", score: { B: 1 } },
+          { text: "감성적 🌙", score: { C: 1 } },
+          { text: "계획적 📅", score: { D: 1 } },
+        ],
+      },
+    ],
+    results: [
+      {
+        id: "A",
+        title: "햇살 놀이터 ☀️",
+        description:
+          "밝고 활기찬 에너지의 소유자! 사람들과 어울리는 것을 좋아하고 매일 탐험하고 싶은 당신에게 딱 맞는 공간입니다.",
+        type: "A",
+        imageUrl: "/images/playground_sun.svg",
+      },
+      {
+        id: "B",
+        title: "편안 숲속 쉼터 🍃",
+        description:
+          "마음이 평온하고 휴식을 좋아하는 감성러. 혼자 사유하거나 차분한 활동이 맞는 당신을 위한 힐링 공간입니다.",
+        type: "B",
+        imageUrl: "/images/playground_forest.svg",
+      },
+      {
+        id: "C",
+        title: "은하수 비밀 공간 🌌",
+        description:
+          "감성적이고 생각이 깊은 당신. 혼자 있는 시간도 즐기고 밤 분위기를 좋아하는 당신만의 비밀 아지트입니다.",
+        type: "C",
+        imageUrl: "/images/playground_galaxy.svg",
+      },
+      {
+        id: "D",
+        title: "정리 정돈 연구소 📊",
+        description:
+          "계획적이고 깔끔한 당신은 정돈이 행복! 목표 세우기, 루틴 만들기를 좋아하는 당신을 위한 스마트 공간입니다.",
+        type: "D",
+        imageUrl: "/images/playground_lab.svg",
+      },
+    ],
+    longDescription: `
+      <h2>나에게 딱 맞는 심테랜드 놀이터는?</h2>
+      <p>
+        사람마다 편안함을 느끼고 즐거워하는 공간이 다릅니다. 
+        어떤 사람은 시끌벅적한 파티룸을 좋아하고, 어떤 사람은 조용한 서재를 선호하죠.
+      </p>
+      <p>
+        10가지 질문을 통해 당신의 성향을 분석하고, 심테랜드에서 가장 잘 어울리는 놀이 공간을 추천해 드립니다.
+        결과에 따라 맞춤형 콘텐츠(일기장, 챌린지, 비밀 노트 등)도 함께 확인해보세요!
+      </p>
+    `,
+  },
 ];
 
 export function getTestById(id: string): Test | undefined {
