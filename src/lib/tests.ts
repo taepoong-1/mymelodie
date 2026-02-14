@@ -26,6 +26,7 @@ export type Test = {
   viewCount: number;
   questions: Question[];
   results: TestResult[];
+  longDescription?: string;
 };
 
 export const tests: Test[] = [
@@ -79,6 +80,18 @@ export const tests: Test[] = [
         imageUrl: "/images/fruit_blueberry.svg",
       },
     ],
+    longDescription: `
+      <h2>과일로 알아보는 나의 성격 유형</h2>
+      <p>
+        사람은 저마다 고유한 향기와 맛을 지닌 과일과 같습니다. 
+        어떤 사람은 톡 쏘는 레몬처럼 상큼하고, 어떤 사람은 묵직한 수박처럼 든든하죠.
+      </p>
+      <p>
+        간단한 3가지 질문을 통해 당신이 어떤 과일과 가장 닮았는지 알아보세요. 
+        당신의 숨겨진 매력과 성향을 과일에 비유하여 재미있게 풀어드립니다. 
+        친구들과 결과를 공유하며 서로 어떤 과일인지 비교해보는 것도 꿀잼 포인트!
+      </p>
+    `,
   },
   {
     id: "love-style",
@@ -172,6 +185,20 @@ export const tests: Test[] = [
         imageUrl: "/images/love_observant.svg",
       },
     ],
+    longDescription: `
+      <h2>나의 연애 스타일은 과연?</h2>
+      <p>연애를 할 때 나는 어떤 모습일까요? 좋아하는 사람 앞에서 나도 모르게 나오는 행동들이 나의 진짜 연애 스타일을 말해줍니다.</p>
+      <p>
+        이 테스트는 평소 당신의 행동 패턴과 가치관을 분석하여 가장 잘 어울리는 연애 스타일을 진단해 드립니다. 
+        적극적인 직진러인지, 신중한 관찰러인지, 아니면 자유를 꿈꾸는 영혼인지 지금 바로 확인해보세요!
+      </p>
+      <h3>이런 분들에게 추천합니다</h3>
+      <ul>
+        <li>내 연애 패턴이 궁금하신 분</li>
+        <li>썸 타는 그 사람의 행동이 이해가 안 되시는 분</li>
+        <li>나와 잘 맞는 연애 상대가 어떤 타입인지 알고 싶은 분</li>
+      </ul>
+    `,
   },
 ];
 

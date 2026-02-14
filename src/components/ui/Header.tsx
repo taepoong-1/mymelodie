@@ -16,6 +16,7 @@ export default function Header() {
     { label: "궁합", href: "/gung-hap" },
     { label: "계산기", href: "/calculator" },
     { label: "운세", href: "/fortune" },
+    { label: "블로그", href: "/blog" },
     { label: "인기", href: "/popular" },
   ];
 
