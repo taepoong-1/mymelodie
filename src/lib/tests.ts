@@ -355,6 +355,211 @@ export const tests: Test[] = [
       </p>
     `,
   },
+  {
+    id: "human-brain",
+    title: "너의 뇌는 몇 % 인간인가?",
+    description:
+      "당신은 정말 인간일까…? 15개의 질문으로 당신의 뇌 정체를 분석합니다.",
+    category: "personality",
+    viewCount: 0,
+    questions: [
+      {
+        id: 1,
+        text: "길 가다 돌 있으면?",
+        answers: [
+          { text: "차본다", score: { human: 2 } },
+          { text: "피해서 간다", score: { npc: 2 } },
+          { text: "왜 있는지 관찰", score: { alien: 2 } },
+          { text: "들고 간다", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 2,
+        text: "혼자 있을 때 가장 많이 하는 행동",
+        answers: [
+          { text: "노래 부름", score: { human: 2 } },
+          { text: "아무 생각 없음", score: { npc: 2 } },
+          { text: "상상함", score: { alien: 2 } },
+          { text: "계획 세움", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 3,
+        text: "갑자기 5억 생기면?",
+        answers: [
+          { text: "여행", score: { human: 2 } },
+          { text: "저축", score: { npc: 2 } },
+          { text: "실험해봄", score: { alien: 2 } },
+          { text: "투자 계획표 작성", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 4,
+        text: "친구가 울면?",
+        answers: [
+          { text: "같이 울어줌", score: { human: 2 } },
+          { text: "위로함", score: { npc: 2 } },
+          { text: "왜 우는지 분석", score: { alien: 2 } },
+          { text: "해결책 제시", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 5,
+        text: "밤 3시에 깼다",
+        answers: [
+          { text: "폰함", score: { human: 2 } },
+          { text: "다시 잠", score: { npc: 2 } },
+          { text: "창밖 봄", score: { alien: 2 } },
+          { text: "내일 일정 생각", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 6,
+        text: "엘베 거울 보면?",
+        answers: [
+          { text: "표정 체크", score: { human: 2 } },
+          { text: "그냥 있음", score: { npc: 2 } },
+          { text: "눈싸움함", score: { alien: 2 } },
+          { text: "자세 교정", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 7,
+        text: "가장 무서운 것",
+        answers: [
+          { text: "혼자 있음", score: { human: 2 } },
+          { text: "돈 없음", score: { npc: 2 } },
+          { text: "정체 모름", score: { alien: 2 } },
+          { text: "계획 망함", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 8,
+        text: "노래 들을 때",
+        answers: [
+          { text: "감정 몰입", score: { human: 2 } },
+          { text: "배경음", score: { npc: 2 } },
+          { text: "세계관 상상", score: { alien: 2 } },
+          { text: "가사 분석", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 9,
+        text: "심심할 때",
+        answers: [
+          { text: "친구 연락", score: { human: 2 } },
+          { text: "누워있기", score: { npc: 2 } },
+          { text: "이상한 생각", score: { alien: 2 } },
+          { text: "할 일 찾기", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 10,
+        text: "시험 전날",
+        answers: [
+          { text: "벼락치기", score: { human: 2 } },
+          { text: "포기", score: { npc: 2 } },
+          { text: "시험 의미 고민", score: { alien: 2 } },
+          { text: "계획표 만듦", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 11,
+        text: "길 잃으면",
+        answers: [
+          { text: "사람에게 물음", score: { human: 2 } },
+          { text: "지도 봄", score: { npc: 2 } },
+          { text: "일부러 더 돌아다님", score: { alien: 2 } },
+          { text: "경로 분석", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 12,
+        text: "누가 쳐다보면",
+        answers: [
+          { text: "웃어줌", score: { human: 2 } },
+          { text: "무시", score: { npc: 2 } },
+          { text: "이유 상상", score: { alien: 2 } },
+          { text: "시선 계산", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 13,
+        text: "좋아하는 색",
+        answers: [
+          { text: "밝은색", score: { human: 2 } },
+          { text: "무채색", score: { npc: 2 } },
+          { text: "보라/특이색", score: { alien: 2 } },
+          { text: "흰색", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 14,
+        text: "갑자기 비 오면",
+        answers: [
+          { text: "뛰어감", score: { human: 2 } },
+          { text: "비 맞음", score: { npc: 2 } },
+          { text: "감성 느낌", score: { alien: 2 } },
+          { text: "날씨앱 확인", score: { cat: 2 } },
+        ],
+      },
+      {
+        id: 15,
+        text: "자신을 한마디로",
+        answers: [
+          { text: "사람 좋아함", score: { human: 2 } },
+          { text: "무난함", score: { npc: 2 } },
+          { text: "이상함", score: { alien: 2 } },
+          { text: "체계적", score: { cat: 2 } },
+        ],
+      },
+    ],
+    results: [
+      {
+        id: "human",
+        title: "정상 인간 👤",
+        description:
+          "당신은 매우 인간적입니다. 감정·공감·현실감 모두 정상 범주에 속하며, 주변 사람들이 가장 편해하는 타입입니다.",
+        type: "human",
+        imageUrl: "/images/brain_human.svg",
+      },
+      {
+        id: "cat",
+        title: "사람인 척하는 고양이 🐱",
+        description:
+          "겉은 인간인데 속은 고양이입니다. 자기만의 세계가 확실하고 귀찮은 건 딱 질색! 하고 싶은 것만 하는 자유로운 영혼입니다.",
+        type: "cat",
+        imageUrl: "/images/brain_cat.svg",
+      },
+      {
+        id: "npc",
+        title: "배경 캐릭터 (NPC) 🤖",
+        description:
+          "당신은 안정형 존재입니다. 세상을 조용히 살아가는 타입이지만, 위기 상황에서는 의외로 핵심적인 역할을 해내는 숨은 고수일지도 모릅니다.",
+        type: "npc",
+        imageUrl: "/images/brain_npc.svg",
+      },
+      {
+        id: "alien",
+        title: "지구 적응 중인 외계인 👽",
+        description:
+          "사람들과 사고방식이 다릅니다. 독특한 상상력이 폭발하며 가끔 이해 불가한 행동을 하지만, 이런 사람들이 세상을 바꿉니다.",
+        type: "alien",
+        imageUrl: "/images/brain_alien.svg",
+      },
+    ],
+    longDescription: `
+      <h2>자네, 정말 인간인가?</h2>
+      <p>
+        가끔 내 자신이 너무 기계적으로 느껴지거나, 반대로 남들과 너무 다른 생각을 해서 '내가 이상한가?' 고민해본 적 있나요?
+        혹시 당신의 뇌 구조가 남들과 조금 다를지도 모릅니다.
+      </p>
+      <p>
+        15개의 정밀 질문을 통해 당신의 뇌가 인간에 얼마나 가까운지 분석해 드립니다.
+        인간 지수(%)와 함께 당신의 진짜 정체(고양이, 외계인, 혹은 NPC?)를 확인해보세요!
+      </p>
+    `,
+  },
 ];
 
 export function getTestById(id: string): Test | undefined {

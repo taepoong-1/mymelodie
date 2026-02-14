@@ -43,7 +43,11 @@ export default function TestRunner() {
       } else {
         // Test Finished - Calculate Result
         const resultType = calculateResult(newScores, test.results);
-        router.push(`/tests/${testId}/result?type=${resultType}`);
+        const query = new URLSearchParams({
+          type: resultType,
+          human: (newScores.human || 0).toString(),
+        });
+        router.push(`/tests/${testId}/result?${query.toString()}`);
       }
     }, 300);
   };

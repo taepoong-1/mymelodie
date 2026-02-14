@@ -13,6 +13,9 @@ function ResultContent() {
   const testId = params?.id as string;
   const resultType = searchParams?.get("type");
 
+  const humanScore = parseInt(searchParams?.get("human") || "0");
+  const humanPercent = Math.round((humanScore / 30) * 100);
+
   const test = getTestById(testId);
   const result = test?.results.find((r) => r.id === resultType);
 
@@ -22,10 +25,20 @@ function ResultContent() {
 
   const handleShare = async () => {
     try {
+      const shareTitle =
+        testId === "human-brain"
+          ? `나의 뇌는 인간 ${humanPercent}%! 나머지는 ${result.title.split(" ")[0]}?`
+          : result.title;
+
+      const shareText =
+        testId === "human-brain"
+          ? `당신은 ${humanPercent}% 인간입니다. ${result.description}`
+          : result.description;
+
       if (navigator.share) {
         await navigator.share({
-          title: result.title,
-          text: result.description,
+          title: shareTitle,
+          text: shareText,
           url: window.location.href,
         });
       } else {
@@ -33,10 +46,6 @@ function ResultContent() {
       }
     } catch (error) {
       console.error("Error sharing:", error);
-      // If user cancels or other error, fallback to copy if it wasn't a cancellation
-      // But typically we don't want to annoy user if they cancelled.
-      // However, on some desktops navigator.share exists but fails immediately.
-      // We'll fall back to copy only if share is undefined, which is handled above.
     }
   };
 
@@ -85,6 +94,21 @@ function ResultContent() {
         <p
           style={{ fontSize: "1.1rem", lineHeight: 1.6, marginBottom: "24px" }}
         >
+          {testId === "human-brain" && (
+            <div
+              className="animate-pulse"
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: 800,
+                color: "var(--primary)",
+                marginBottom: "16px",
+              }}
+            >
+              당신의{" "}
+              <span style={{ color: "var(--secondary)" }}>인간 지수</span>는{" "}
+              {humanPercent}% 입니다!
+            </div>
+          )}
           {result.description}
         </p>
         {result.imageUrl ? (
