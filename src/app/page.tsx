@@ -44,7 +44,7 @@ export default function Home() {
             <ArrowRight size={18} style={{ marginLeft: "8px" }} />
           </Link>
           <Link
-            href="/today"
+            href="/fortune"
             className="btn"
             style={{
               background: "var(--surface)",
