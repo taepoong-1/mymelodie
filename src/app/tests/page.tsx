@@ -44,15 +44,16 @@ export default function TestsPage() {
                 marginBottom: "16px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
                 fontSize: "3rem",
               }}
             >
-              {test.category === "personality"
-                ? "🧩"
-                : test.category === "love"
-                  ? "💘"
-                  : "💼"}
+              {test.emoji
+                ? test.emoji
+                : test.category === "personality"
+                  ? "🧩"
+                  : test.category === "love"
+                    ? "💘"
+                    : "💼"}
             </div>
             <div style={{ display: "flex", gap: "8px", marginBottom: "8px" }}>
               <span

@@ -22,6 +22,7 @@ export type Test = {
   title: string;
   description: string;
   imageUrl?: string;
+  emoji?: string;
   category: "personality" | "love" | "work";
   viewCount: number;
   questions: Question[];
@@ -34,6 +35,7 @@ export const tests: Test[] = [
     id: "fruit-personality",
     title: "나와 닮은 과일 찾기",
     description: "상큼한 과일로 알아보는 나의 성격 유형 테스트",
+    emoji: "🍓",
     category: "personality",
     viewCount: 12500,
     questions: [
@@ -97,6 +99,7 @@ export const tests: Test[] = [
     id: "love-style",
     title: "나의 연애 스타일 진단",
     description: "나는 어떤 연애를 추구할까? 연애 세포 진단하기",
+    emoji: "💖",
     category: "love",
     viewCount: 8900,
     questions: [
@@ -205,6 +208,7 @@ export const tests: Test[] = [
     title: "심테랜드 놀이터 유형 테스트",
     description:
       "나는 어떤 놀이터에서 가장 행복할까? 나에게 딱 맞는 심테랜드 공간 찾기!",
+    emoji: "🎢",
     category: "personality",
     viewCount: 0,
     questions: [
@@ -360,6 +364,7 @@ export const tests: Test[] = [
     title: "너의 뇌는 몇 % 인간인가?",
     description:
       "당신은 정말 인간일까…? 15개의 질문으로 당신의 뇌 정체를 분석합니다.",
+    emoji: "🧠",
     category: "personality",
     viewCount: 0,
     questions: [
