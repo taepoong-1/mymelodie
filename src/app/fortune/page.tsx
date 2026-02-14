@@ -170,24 +170,24 @@ export default function FortunePage() {
             >
               <div
                 style={{
-                  background: "#f8f9fa",
+                  background: "var(--background)",
                   padding: "16px",
                   borderRadius: "8px",
                 }}
               >
-                <div style={{ marginBottom: "4px", color: "#999" }}>
+                <div style={{ marginBottom: "4px", color: "var(--text-sub)" }}>
                   행운의 색
                 </div>
                 <div style={{ fontWeight: 700 }}>{result.luckyColor}</div>
               </div>
               <div
                 style={{
-                  background: "#f8f9fa",
+                  background: "var(--background)",
                   padding: "16px",
                   borderRadius: "8px",
                 }}
               >
-                <div style={{ marginBottom: "4px", color: "#999" }}>
+                <div style={{ marginBottom: "4px", color: "var(--text-sub)" }}>
                   행운의 시간
                 </div>
                 <div style={{ fontWeight: 700 }}>{result.luckyTime}</div>
