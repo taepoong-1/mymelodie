@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     siteName: "심테랜드",
   },
+  verification: {
+    google: "DrTEIR3rVs8RSh6TaEjYoKlhHKjqS4uEZiEeM5yDWXg",
+  },
 };
 
 export default function RootLayout({
