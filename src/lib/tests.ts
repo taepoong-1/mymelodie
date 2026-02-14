@@ -68,6 +68,7 @@ export const tests: Test[] = [
         description:
           "어디서나 사랑받는 인싸! 분위기 메이커인 당신은 딸기입니다.",
         type: "E",
+        imageUrl: "/images/fruit_strawberry.svg",
       },
       {
         id: "blueberry",
@@ -75,6 +76,7 @@ export const tests: Test[] = [
         description:
           "조용하지만 알찬 매력의 소유자. 혼자만의 시간을 즐기는 당신은 블루베리입니다.",
         type: "I",
+        imageUrl: "/images/fruit_blueberry.svg",
       },
     ],
   },
@@ -143,6 +145,7 @@ export const tests: Test[] = [
         description:
           "좋아하면 앞뒤 안 가리고 직진! 솔직하고 적극적인 당신은 사랑쟁이입니다.",
         type: "direct",
+        imageUrl: "/images/love_direct.svg",
       },
       {
         id: "stable",
@@ -150,6 +153,7 @@ export const tests: Test[] = [
         description:
           "신뢰와 안정이 최우선! 한번 연애하면 오래가는 진국 스타일입니다.",
         type: "stable",
+        imageUrl: "/images/love_stable.svg",
       },
       {
         id: "free",
@@ -157,6 +161,7 @@ export const tests: Test[] = [
         description:
           "구속은 NO! 같이 있으면 재밌고 즐거운 친구 같은 연애를 선호합니다.",
         type: "free",
+        imageUrl: "/images/love_free.svg",
       },
       {
         id: "observant",
@@ -164,6 +169,7 @@ export const tests: Test[] = [
         description:
           "돌다리도 두들겨 보고 건너는 스타일. 마음을 여는 데 시간이 걸리지만 내 사람에겐 따뜻합니다.",
         type: "observant",
+        imageUrl: "/images/love_observant.svg",
       },
     ],
   },

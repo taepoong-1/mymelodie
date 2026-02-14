@@ -63,19 +63,37 @@ function ResultContent() {
         >
           {result.description}
         </p>
-        <div
-          style={{
-            width: "100%",
-            height: "200px",
-            background: "#f1f3f5",
-            borderRadius: "12px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          이미지 영역 (추후 추가)
-        </div>
+        {result.imageUrl ? (
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "24px",
+              borderRadius: "12px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={result.imageUrl}
+              alt={result.title}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "200px",
+              background: "#f1f3f5",
+              borderRadius: "12px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "24px",
+            }}
+          >
+            이미지 준비중
+          </div>
+        )}
       </div>
 
       <div
