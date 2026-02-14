@@ -1,2 +1,0 @@
-# Force trailing slash for all blog posts
-/blog/:slug /blog/:slug/ 301
