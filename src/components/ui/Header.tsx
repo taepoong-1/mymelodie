@@ -5,6 +5,7 @@ import { Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
 import styles from "./Header.module.css";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,14 +36,17 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className={styles.menuBtn}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="메뉴 열기"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <ThemeToggle />
+          {/* Mobile Menu Button */}
+          <button
+            className={styles.menuBtn}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="메뉴 열기"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Mobile Nav Overlay */}
         {isMenuOpen && (
