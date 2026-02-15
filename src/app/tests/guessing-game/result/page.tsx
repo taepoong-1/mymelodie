@@ -108,7 +108,7 @@ function ResultContent() {
             <div
               style={{
                 fontSize: "0.9rem",
-                color: "var(--text-sub)",
+                color: "#666", // ensure visibility on light background
                 marginBottom: "4px",
               }}
             >
@@ -129,6 +129,7 @@ function ResultContent() {
                 justifyContent: "center",
                 gap: "16px",
                 marginTop: "16px",
+                color: "#555", // Explicit dark text for light background
               }}
             >
               <div style={{ fontSize: "0.9rem" }}>질문 {turnsUsed}회</div>

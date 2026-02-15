@@ -175,6 +175,7 @@ function PlayContent() {
             padding: "8px 12px",
             background: "#f8f9fa",
             fontSize: "0.9rem",
+            color: "#333", // Explicit dark text for light background
           }}
         >
           <Lightbulb size={16} style={{ marginRight: "4px" }} /> 힌트 (-12점)
