@@ -565,6 +565,19 @@ export const tests: Test[] = [
       </p>
     `,
   },
+  {
+    id: "guessing-game",
+    title: "AI 정체 맞추기 테스트",
+    description:
+      "AI가 숨기고 있는 정체를 스무고개로 맞춰보세요! (인물/동물/사물)",
+    emoji: "🕵️",
+    category: "personality",
+    viewCount: 5400,
+    questions: [], // Dummy
+    results: [], // Dummy
+    longDescription:
+      "AI가 생각하고 있는 정체를 맞춰보세요. 질문을 던지면 AI가 응/아니/애매해로 대답합니다.",
+  },
 ];
 
 export function getTestById(id: string): Test | undefined {
